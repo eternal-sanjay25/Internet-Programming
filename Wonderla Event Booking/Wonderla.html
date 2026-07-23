@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wonderla</title>
+</head>
+<style>
+
+body{
+    background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+}
+    table, td, th {
+        border: 5px solid black;
+        border-collapse: collapse;
+    }
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0077b6;
+    padding:15px 30px;
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+<body>
+<center><h1>Welcome to WonderLa</h1></center>
+<header>
+<nav>
+<div>
+<img src="logo.png" alt="logo"></div>
+<ul>
+<li><a href="#Table" >Table</a></li>
+<li><a href="#List" >List</a></li>
+<li><a href="#Forms" >Book a Ticket</a></li>
+</ul>
+</nav>
+</header>
+<center><img src="st.jpeg" alt="Wonderla" width="100%" height="400px"></center>
+<section id="Table">
+<table border="10" width="100%" height="200px">
+<tr>
+<th>Membership</th>
+<th>Benefits</th>
+<th>Amount</th>
+<th>Availability</th></tr>
+<tr><td><center><img src="plat.jpg" alt="Platinum" width=75px height=75px></center></td>
+<td>Access to all rides</td>
+<td>Rs 2000</td>
+<td color="red">5 slots left!!</td></tr>
+<tr><td><center><img src="gold.jpg" alt="Gold" width=75px height=75px></center></td>
+<td>Access to 3 rides</td>
+<td>Rs 1500</td>
+<td color="red">Limited slots left!!</td></tr>
+<tr><td><center><img src="silver.jpg" alt="Silver" width=75px height=75px></center></td>
+<td>Access to 2 rides</td>
+<td>Rs 700</td>
+<td color="red">Limited slots left!!</td></tr>
+<tr><td><center><img src="basic.jpg" alt="Basic" width=75px height=75px></center></td>
+<td>Rides are to be paid</td>
+<td>Rs 100</td>
+<td color="red">Limited slots left!!</td></tr>
+
+<hr>
+</section>
+<section id="List">
+
+<table style="border: 10px solid black,border-collapse: collapse;" width=100%>
+<hr>
+<h1 id="font">Rides</h1></tr>
+<td>
+  <center>
+<img src="1.jpeg" alt="Ride" width=100% height=100%><p size=10><h3>
+Snake and Water</h3></p>
+  <ul>
+    <li>Slide through water</li>
+    <li>Roller coaster</li>
+    <li>Multiple Person</li>
+  </ul>
+  </center>
+</td>
+<td><center>
+<img src="2.jpeg" alt="Ride" width=100% height=100%><p size=10><h3>Water Chess</h3></p>
+  <ul>
+    <li>Slide through water</li>
+    <li>IQ200r</li>
+    <li>Play and Slide</li>
+  </ul></center>
+</td>
+<td><center>
+<img src="3.jpeg" alt="Ride" width=100% height=100%><p size=10><h3>Rollar Water Coaster</h3></p>
+  <ul>
+    <li>Heaven in 5 mins</li>
+    <li>Roller coaster</li>
+    <li>Multiple Person</li>
+  </ul></center>
+</td>
+</table>
+<br>
+<center>
+<table width=100%>
+  <td><center>
+<img src="4.jpeg" alt="Ride" width=100% height=100%><p size=10><h3>Jungle Water Splash</h3></p>
+  <ul>
+    <li>Jungle Environment</li>
+    <li>Water Guns</li>
+    <li>Multiplayer</li>
+  </ul></center>
+</td>
+  <td><center>
+<img src="5.jpeg" alt="Ride" width=100% height=100%><p size=10><h3>Edge Water Runner</h3></p>
+  <ul>
+    <li>Run to survive</li>
+    <li>Find Keys</li>
+    <li>Deactivate Warm Water</li>
+  </ul></center>
+</td>
+<td><center>
+<img src="6.jpeg" alt="Ride" width=100% height=100%><p size=10><h3>Water Gunners</h3></p>
+  <ul>
+    <li>Shoot water</li>
+    <li>Water People</li>
+    <li>Kill to Survive</li>
+  </ul></center>
+</td>
+</table>
+<hr>
+</section>
+<br>
+<section id="Forms">
+<table width="100%">
+  <tr>
+    <td>
+      <center>
+        <h3>For Doubts/Enquiry:</h3><br>
+        <p>Call 2345545646</p>
+        <p>Mail wonderla@gmail.com</p>
+      </center>
+    </td>
+  <td>
+<center>
+<h2>Booking Form</h2>
+<forms action=index.html>
+<label>Name:</label>
+<input type="text" name="Text">
+<br><br>
+<label>Number:</label>
+<input type="text" name="Num">
+<br><br>
+<label>Email:</label>
+<input type="email" name="mail">
+<br><br>
+<label>Password:</label>
+<input type="password" name="Text">
+<br><br>
+<label>Date:</label>
+<input type="date" name="Text">
+<br><br>
+<label>Membership:</label>
+
+<input type="radio" name="maber" value="Platinum">
+<label>Platinum</label>
+<input type="radio" name="maber" value="Gold">
+<label>Gold</label>
+
+<input type="radio" name="maber" value="Silver">
+<label>Silver</label>
+
+<input type="radio" name="maber" value="Basic">
+<label>Basic</label>
+<br><br>
+<input type="button" name="Text" value="Submit">
+</center>
+<hr>
+</forms>
+</td>
+<td>
+  <center>
+  <img src="i.jpeg" alt="wonderla" height="315px" width="350px">
+  </center>
+</td>
+</tr>
+</table>
+</section>
+</body>
+</html>
