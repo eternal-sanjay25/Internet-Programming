@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amazon</title>
+
+<style>
+#cart{
+    width:350px;
+    height:220px;
+    border:3px dotted black;
+    padding:10px;
+    overflow:auto;
+}
+#cart img{
+    width:80px;
+    margin:5px;
+}
+</style>
+
+</head>
+<body>
+
+<center>
+<h1>Welcome to Amazon</h1>
+<img src="download.png">
+</center>
+
+<h3>Choose your Section</h3>
+
+<img src="Section.png" usemap="#section1">
+
+<map name="section1">
+<area shape="rect" coords="0,0,202,195" href="#laptop">
+<area shape="rect" coords="199,8,427,193" href="#airpods">
+<area shape="rect" coords="422,7,648,191" href="#headphone">
+<area shape="rect" coords="647,7,847,195" href="#phone">
+</map>
+
+<section id="laptop">
+<h4>Laptop Section</h4>
+<table border="4">
+<tr>
+<td><img src="download (1).webp" height="250" width="250"><video src="1.mp4" controls width="250" height="250" loop></video></td>
+<td><img src="download (2).webp" height="250" width="250"><video src="1.mp4" controls width="250" height="250" loop></video></td>
+<td><img src="download.webp" height="250" width="250"><video src="1.mp4" controls width="250" height="250" loop></video></td>
+<td><img src="images (9).jpeg" height="250" width="250"><video src="1.mp4" controls width="250" height="250" loop></video></td>
+<td><img src="images (10) (1).jpeg" height="250" width="250"><video src="1.mp4" controls width="250" height="250" loop></video></td>
+<td><img src="shopping.webp" height="250" width="250"><video src="1.mp4" controls width="250" height="250" loop></video></td>
+</tr>
+</table>
+</section>
+
+<section id="airpods">
+<h4>Airpods Section</h4>
+<table border="4">
+<tr>
+<td><img src="download (3).webp" height="250" width="250"></td>
+<td><img src="download (4).webp" height="250" width="250"></td>
+<td><img src="download (5).webp" height="250" width="250"></td>
+<td><img src="images (10) (7).jpeg" height="250" width="250"></td>
+<td><img src="images (10) (6).jpeg" height="250" width="250"></td>
+<td><img src="images (10) (5).jpeg" height="250" width="250"></td>
+</tr>
+</table>
+</section>
+
+<section id="headphone">
+<h4>Headphones Section</h4>
+<table border="4">
+<tr>
+<td><img src="images (3).jfif" height="250" width="250"></td>
+<td><img src="images (2).jfif" height="250" width="250"></td>
+<td><img src="images (4).jfif" height="250" width="250"></td>
+<td><img src="images.jfif" height="250" width="250"></td>
+<td><img src="images (3).jfif" height="250" width="250"></td>
+<td><img src="images (2).jfif" height="250" width="250"></td>
+</tr>
+</table>
+</section>
+
+<section id="phone">
+<h4>Phone Section</h4>
+<table border="4">
+<tr>
+<td><img src="images (2).jpeg" height="250" width="250"></td>
+<td><img src="images (3).jpeg" height="250" width="250"></td>
+<td><img src="images (4).jpeg" height="250" width="250"></td>
+<td><img src="images (7).jpeg" height="250" width="250"></td>
+<td><img src="images (8).jpeg" height="250" width="250"></td>
+<td><img src="images (6).jpeg" height="250" width="250"></td>
+</tr>
+</table>
+</section>
+<table border="1" width="100%" cellpadding="15">
+<tr valign="top">
+
+<td width="33%" align="center">
+<h2>Cart</h2>
+<div id="cart" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+</td>
+
+<td width="33%">
+<h2 align="center">Booking Form</h2>
+
+<form action="index.html">
+<label>Name:</label><br>
+<input type="text"><br><br>
+
+<label>Number:</label><br>
+<input type="text"><br><br>
+
+<label>Email:</label><br>
+<input type="email"><br><br>
+
+<label>Password:</label><br>
+<input type="password"><br><br>
+
+<label>Date:</label><br>
+<input type="date"><br><br>
+
+<label>Membership:</label><br>
+<input type="radio" name="member"> Platinum<br>
+<input type="radio" name="member"> Gold<br>
+<input type="radio" name="member"> Silver<br>
+<input type="radio" name="member"> Basic<br><br>
+
+<input type="submit" value="Submit">
+</form>
+</td>
+
+<td width="33%" align="center">
+<h2>Contact Info</h2>
+<p><b>Phone:</b> 2345545646</p>
+<p><b>Email:</b> wonderla@gmail.com</p>
+<p><b>Address:</b><br>
+Amazon Store,<br>
+Anna Nagar,<br>
+Chennai - 600040
+</p>
+</td>
+
+</tr>
+</table>
+<script>
+
+function allowDrop(e){
+    e.preventDefault();
+}
+
+function drag(e){
+    e.dataTransfer.setData("src", e.target.src);
+}
+
+function drop(e){
+    e.preventDefault();
+
+    let img=document.createElement("img");
+    img.src=e.dataTransfer.getData("src");
+    img.width=80;
+
+    document.getElementById("cart").appendChild(img);
+}
+
+document.querySelectorAll("img").forEach(function(img){
+    img.draggable=true;
+    img.ondragstart=drag;
+});
+
+</script>
+<br>
+<hr size=4px>
+  <center>
+  <input type="button" value="Store location">
+  </center>
+</body>
+</html>
