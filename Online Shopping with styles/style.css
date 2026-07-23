@@ -1,0 +1,18 @@
+body {
+  background-color: #f4f4f9;
+}
+h2 {
+  color: #1d3557;
+  font-family: 'Segoe UI';
+  font-size: 28px;
+  font-weight: 700;
+}
+button{
+  padding: 20px 30px;
+  font-size: 40px;
+  border-radius: 8px;}
+p {
+  font-family: system-ui;
+  font-size: 16px;
+  color: #333333;
+}
