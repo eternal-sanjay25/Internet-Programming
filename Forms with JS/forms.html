@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workshop Booking Form</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Workshop Booking Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <table>
+
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" id="name" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phone Number:</td>
+                <td>
+                    <input type="text" id="phone" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="text" id="email" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" required> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Workshop:</td>
+                <td>
+                    <select id="workshop" required>
+                        <option value="">Select Workshop</option>
+                        <option>AI Workshop</option>
+                        <option>Web Development</option>
+                        <option>Data Science</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Payment:</td>
+                <td>
+                    <select id="payment" required>
+                        <option value="">Select Payment Method</option>
+                        <option>UPI</option>
+                        <option>Card</option>
+                        <option>Cash</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Accommodation Required:</td>
+                <td>
+                    <input type="radio" name="accommodation" required> Yes
+                    <input type="radio" name="accommodation"> No
+                </td>
+            </tr>
+
+            <tr>
+                <td>Booking Date:</td>
+                <td>
+                    <input type="date" id="date" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Book Now">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <script>
+
+        function validateForm() {
+
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+
+            // Check phone number
+            if (isNaN(phone) || phone.length != 10) {
+                alert("Phone number must contain exactly 10 numbers.");
+                return false;
+            }
+
+            // Check email
+            var at = email.indexOf("@");
+            var dot = email.indexOf(".");
+
+            if (at == -1 || dot == -1 || at > dot) {
+                alert("Enter a valid email address.");
+                return false;
+            }
+
+            alert("Workshop booking successful!");
+
+            return true;
+        }
+
+    </script>
+
+</body>
+</html>
