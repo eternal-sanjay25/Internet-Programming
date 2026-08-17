@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Online Quiz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="QuizServlet" method="post">
+    <center>
+        <div><h3>Online Quiz For Students</h3></div>
+        <div>
+            Name:<input type="text" name="Name">
+        </div>
+        <div>
+            <p>1. What is the capital of India?</p>
+            <input type="radio" name="q1" value="Maharashtra" required>Maharashtra<br>
+            <input type="radio" name="q1" value="Tamil Nadu" required>Tamil Nadu<br>
+            <input type="radio" name="q1" value="Delhi" required>Delhi<br>
+            <input type="radio" name="q1" value="Assam" required>Assam<br>
+        </div>
+        <div>
+            <p>2. Who invented Light Bulb?</p>
+            <input type="radio" name="q2" value="Thomas Alva Edison" required>Thomas Alva Edison<br>
+            <input type="radio" name="q2" value="Albert Einstein" required>Albert Einstein<br>
+            <input type="radio" name="q2" value="Issac Newton" required>Issac Newton<br>
+            <input type="radio" name="q2" value="James Jeramy" required>James Jeramy<br>
+        </div>
+        <div>
+            <p>3. Name the national animal of India.</p>
+            <input type="text" name="q3" required>
+        </div>
+        <div>
+            <p>4. Name the national Flower of India.</p>
+            <input type="text" name="q4" required>
+        </div><br><br>
+        <button>Submit</button>
+    </center>
+            
+            </form>
+    </body>
+</html>
